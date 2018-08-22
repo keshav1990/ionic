@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{'Place Details'| translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ <ion-content padding>
+   <ion-list >
+    <ion-item class="h2-esb object-img-fit">
+  <div class="place-new" *ngIf="checkPlaceNew()">{{'New'|translate}}</div>
+ <h2>{{place.places_name}} </h2>
+ <p> {{place.categories_name}} </p>
+ <p> Likes&nbsp;({{place.places_liked}}) </p>
+      <ion-slides pager class="slider-width">
+
+  <ion-slide *ngIf="place!=null">
+      <img  src="{{config.url+place.places_image}}">
+    </ion-slide>
+    <ion-slide *ngFor="let b of place.images">
+      <img   src="{{config.url+b.image}}">
+    </ion-slide>
+
+</ion-slides>
+
+  <ion-row class="md-no-box">
+    <ion-col col-6><button ion-button clear item-start>    <ion-icon ios="ios-heart" md="md-heart"></ion-icon> Favourite</button></ion-col>
+  <ion-col col-6><button ion-button clear item-end name="share" (click)="share()">   <ion-icon name="ios-share-outline"></ion-icon> Share</button></ion-col>
+  </ion-row>
+
+   
+ 
+<ion-item class="place-detail-content no-space" *ngIf="place.places_description!=null && place.places_description!=''">
+<h2> {{'Place Description'|translate}} </h2>
+<div class="place-describtion" [innerHTML]="place.places_description"></div>
+</ion-item>
+
+  
+<ion-item-group class="list-color detail">
+    <ion-item *ngIf="place.streetaddress"> <ion-icon ios="ios-navigate" md="md-navigate"></ion-icon> {{place.streetaddress }}</ion-item>
+    <ion-item *ngIf="place.open_time">    <ion-icon ios="ios-time" md="md-time"></ion-icon>  Open Closes at {{place.open_time}} to {{place.close_time}}</ion-item>
+    <ion-item *ngIf="place.PhoneNumber">   <ion-icon ios="ios-call" md="md-call"></ion-icon> {{place.PhoneNumber}} </ion-item>
+    <ion-item *ngIf="place.websiteURL"> <ion-icon ios="ios-mail" md="md-mail"></ion-icon> {{place.websiteURL}}</ion-item>
+  </ion-item-group>
+
+
+
+<ion-item class="no-space">
+<h2> Reviews </h2>
+</ion-item>
+<ion-slides pager class="slider-reviews">
+
+  <ion-slide>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+  <ion-slide>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+  <ion-slide>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+</ion-slides>
+
+<ion-card class="ion-content-bold"> 
+
+
+  <ion-card-content>
+   Write a Review
+  </ion-card-content>
+
+</ion-card>
+
+
+
+</ion-item>
+    </ion-list>
+ </ion-content>
+ <ion-footer *ngIf="config.footerShowHide=='1'">
+  <footer></footer>
+</ion-footer>

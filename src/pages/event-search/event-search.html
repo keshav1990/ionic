@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{'Event Search'| translate }}
+    </ion-title>
+    <ion-buttons end>
+      
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <form #loginForm="ngForm" (ngSubmit)="getSearchData()">
+    <ion-searchbar [(ngModel)]="search" name="search" placeholder="{{'Search'|translate}}" [showCancelButton]="shouldShowCancel"
+      (ionInput)="onChangeKeyword($event)">
+    </ion-searchbar>
+  </form>
+
+  <div *ngFor="let p of searchResult.events">
+    <event [data]="p" [type]="'list'"></event>
+  </div>
+
+  <ion-list *ngIf="showCategories">
+    <ion-item *ngFor="let c of shared.subEvent_Categories" (click)="openEvents(c.id,c.name)" class="animated flipInX">
+      <ion-avatar item-start>
+        <img src="{{config.url+c.image}}">
+      </ion-avatar>
+      <h2>{{c.name}}</h2>
+      <p>{{c.total_events}} {{'Events'| translate }} </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

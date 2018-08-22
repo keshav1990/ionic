@@ -1,0 +1,698 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+$header-bg: #f7f7ff;
+$header-bg-main: #f7f7ff;
+$border-circle: 40px;
+$h2-color: #484f69;
+$font-bold: bold;
+$font-light: light;
+$font-h2-size: 26px;
+$none: none;
+$half: 50px;
+$bg-transparent: white;
+$font-color: #a6acc2;
+$white-space-normal: normal;
+$line-height: 23px;
+$nav-bar-padding: 22px;
+$title-font-size: 40px;
+$header-padding: 10px 18px 18px 10px;
+$padding-zero: 0px;
+
+
+
+
+
+.toolbar-background-md{
+    background-color: $header-bg !important;
+}
+ion-header{
+    background-color: $header-bg-main;
+}
+.searchbar-md{
+    padding: 0 12px !important;
+	background-color: $header-bg !important;
+	    font-size: 13px;
+        .searchbar-input{
+                border-radius: $border-circle !important;
+				padding: 1px 55px !important;
+    box-shadow: $none !important;
+}
+.searchbar-search-icon{
+        top: 7px !important;
+}
+}
+.segment-button{
+         img{
+       margin: 0 auto;
+   }
+ }
+.title-md{
+    .toolbar-title-md{
+ color: $h2-color;
+ font-weight: $font-bold;
+ font-size: $font-h2-size;
+}
+} 
+div{
+white-space: $white-space-normal !important;
+a{
+   text-decoration: $none;
+}
+p{
+color: $font-color !important;
+white-space: $white-space-normal;
+line-height: $line-height !important;
+}
+}
+.header-bold{
+    border-bottom: 1px solid #f3f3f3 !important;
+	margin-left: 19px !important;
+	padding-left: 0px !important;
+	padding: 10px !important;
+      h2{
+ font-weight: $font-bold !important;
+   }
+   .item-inner{
+       border-bottom: 0px solid #dedede !important;
+   }
+   a{
+     font-weight: lighter;
+	 font-size: 15px;
+   }
+  } 
+.header-md {
+    &:after{
+ display: none;
+ }
+}  
+.white-list{
+   p{
+   white-space: $white-space-normal;
+   }
+   h2{
+   color: $h2-color;
+   font-weight: $font-bold !important;
+   }
+  }
+.list1{
+    min-width: $half - 10px !important;
+   img{
+   border-radius: $border-circle;
+   width: $half !important;
+   height: $half !important;
+   position: absolute;
+   top: 16px;
+   left: 0px;
+}
+}   
+.news-button{
+    background-color: $bg-transparent !important;
+ color: $font-color !important;
+ box-shadow: $none !important;
+ border: 1px solid #cecccc;
+ border-right-width: 1px !important;
+    border-left-width: 1px !important;
+ border-radius: $half !important;
+ height: 32px !important;
+}
+.segment-md{
+  .segment-button{
+      height: $half * 2 !important;
+   white-space: $white-space-normal;
+   line-height: 22px !important;
+  }
+}
+.card-md{
+     p{
+  white-space: $white-space-normal;
+  }
+}
+.h2-esb{
+    h2{
+   font-size: 30px !important;
+   color: $h2-color !important;
+   font-weight: $font-bold !important;
+}
+}
+.ion-navbar{
+   padding-top: $nav-bar-padding; 
+}
+ion-label{
+white-space: $white-space-normal !important;
+}
+
+$colors: (
+  primary-dark:   #233e61,
+  primary:        #51688F,
+  primary-light:  #8096bf,
+
+  secondary-dark: #2a5235,
+  secondary:      #557f5f,
+  secondary-light:#83af8c,
+
+  accent-color:   #dddddd,
+
+  google:         #dd4b39,
+  facebook:       #3b5998,
+
+  danger:         #f53d3d,
+  light:          #f4f4f4,
+  dark:           #222
+);
+
+$background-color:darken(color($colors, light), 1%);
+$toolbar-background:color($colors, primary);
+$text-color:color($colors, dark);
+
+$icon-color-text:color($colors, accent-color);
+
+$white:  #ffffff;
+$black: #000000;
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$button-ios-height : 30px;
+$item-ios-padding-left: 10px;
+$item-ios-padding-right: 10px;
+$item-ios-padding-top: 10px;
+$item-ios-padding-bottom: 10px;
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+$button-md-height: 30px;
+$item-md-padding-left: 10px;
+$item-md-padding-right: 10px;
+$item-md-padding-top: 10px;
+$item-md-padding-bottom: 10px;
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+$button-wp-height: 30px;
+$item-wp-padding-left: 10px;
+$item-wp-padding-right: 10px;
+$item-wp-padding-top: 10px;
+$item-wp-padding-bottom: 10px;
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+
+
+[padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
+     margin-top: 0px !important;
+}
+page-home {
+.toolbar-secondary {
+.slides {
+.swiper-slide{
+     margin-right: 18px !important;
+     margin-left: 7px !important;
+      }
+    }
+  }
+}
+.toolbar-title{
+      font-size: $title-font-size !important;
+}
+.swiper-wrapper{
+      background-color: $header-bg;
+}
+ion-header{
+      padding: $header-padding;
+}
+.scroll-content{
+    padding: $padding-zero;
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+	padding-bottom: 0px !important;
+	background-color: white !important;
+}
+page-home{
+ .grid{
+     padding: $padding-zero;
+ }
+ }
+ .swiper-container{
+    background-color: $header-bg;
+ }
+ ion-icon {
+    display: block !important;
+ }
+.slide-zoom .icon{
+ font-size: 30px;
+}
+page-home{
+ .toolbar-secondary{
+   .slides{
+     .swiper-slide {
+    height: auto !important;
+      }
+    }
+  }
+}
+.icons-layout {
+ ion-icon {
+  &:before {
+     border: 1px solid black;
+           border-radius: 50%;
+           height: 25px;
+           width: 25px;
+     padding: 2px;
+     margin-bottom: 7px
+  }
+ }
+}
+.thumb-img{
+.label-md{
+    margin: 15px 5px 10px 0 !important;
+}
+    .list place{
+      .img-loaded{
+      img{
+   height: 110px !important;
+   border-radius: 4px;
+   }
+   }
+    }
+ }
+.list{ 
+.animated{ 
+.content-images{
+   margin-bottom: 0px !important;
+}
+}
+}
+.no-mg {
+    margin-bottom: 0px !important;
+ h3{
+   font-weight: bold !important;
+      font-size: 17px !important;
+   color: $h2-color !important;
+ }
+}
+.content-images{
+.img-loaded{
+      box-shadow: 0px 0px 2px 2px rgba(196, 196, 196, 0.54);
+      -moz-box-shadow: 0px 0px 2px 2px rgba(196, 196, 196, 0.54);
+      -webkit-box-shadow: 0px 0px 2px 2px rgba(196, 196, 196, 0.54);
+      height: 110px !important;
+      width: 110px !important;
+   border-radius: 4px;
+}
+}
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+    color: #484f69 !important;
+}
+.searchbar-md{
+padding-bottom: 18px !important;
+}
+.groups-custom{
+   margin-bottom: 0px !important;
+}
+.toolbar-secondary{
+  .slides{
+   .selected{
+       border-bottom-color: #417afb !important;
+	   padding-bottom: 2px;
+	  .slide-zoom{
+	      color: #417afb !important;
+	   }
+	   ion-icon{
+	   &:before{
+	       border: 1px solid #417afb !important;
+	   }
+	  }
+    } 
+  } 
+} 
+.top-icons{
+  .slide-zoom{
+    img{
+	 width: 40px;
+	 height: 40px;
+	 display: block;
+     text-align: center;
+     margin: 0 auto;
+	 margin-bottom: 8px;
+	}
+	.icon{
+	font-size: 24px !important;
+	}
+  }
+}
+.object-img-fit{
+.slider-width{
+ img {
+    width: 100%;
+    height: 400px !important;
+    object-fit: cover !important;
+ }
+}
+.swiper-container{
+     background-color: #ffffff !important;
+}
+.swiper-wrapper{
+      background-color: #ffffff !important;
+ }
+}
+.zero-auto{
+    margin: 0 auto !important;
+}
+.segment-md{
+  .segment-button{
+    ion-icon{
+	  margin: 0 auto !important;
+	}
+   }
+  } 
+.news-h3{
+   h6{
+    font-weight: bold !important;
+	font-size: 18px !important;
+	color: #484f69 !important;
+   }
+   .post-excerpt{
+       height: auto !important;
+   }
+   item-start{
+    min-width: 40px !important;
+    min-height: 40px !important;
+	width: 40px !important;
+    height: 40px !important;
+   }
+   .item-md{
+    ion-thumbnail{
+	  min-width: 50px !important;
+      min-height: 30px !important;
+	 img{
+	    width: 50px !important;
+        height: 50px !important;
+        border-radius: 50% !important;
+		position: absolute;
+		top: 10px;
+	}
+   }
+ }	
+}
+.scroll-content{  
+  .height-set{
+   .segment-button{
+     height: auto !important;
+	 padding-top: 10px;
+   }
+ }
+}
+
+page-news-list{
+ .page-news-list{
+   .list{
+    .item{
+     .post-excerpt{
+        height: auto !important;
+        }
+      }
+    }
+  }
+}
+.top-m-zero {
+    margin-top: 0px !important;
+	margin-right: 0px !important;
+}
+.footer-icons{
+   ion-segment-button{
+       padding-top: 16px !important;
+   }
+}
+.fav-share-buttons{
+   .button-inner{
+     display: block !important;
+   }
+  ion-icon{
+      font-size: 27px !important;
+}  
+.disable-hover{  
+  padding: 6px 10px 10px 10px !important;
+  color: #427bfe !important;
+}
+.button-inner{
+    font-size: 10px !important;
+}
+.ion-ios-share-outline{
+&:before {
+    padding-right: 0px !important;
+	padding-bottom: 3px !important;
+}
+}
+.ion-md-heart{
+&:before {
+    padding-right: 0px !important;
+	padding-bottom: 3px !important;
+    }
+  }
+}
+.toggle-md.toggle-checked{
+ .toggle-icon{
+	background-color: #4fd262 !important;
+}
+  .toggle-inner{
+    background-color: #ffffff !important; 
+  }
+}
+page-events{
+ .toolbar-secondary{
+   .slides{
+    .swiper-slide{
+	    height: auto !important;
+		margin-right: 18px !important;
+        margin-left: 7px !important;
+	  }
+    }
+  }
+  .grid{
+      margin-top: 36px;
+  }
+} 
+page-events{
+.event-modify{
+  .events-item{
+         width: 47%;
+         display: inline-block;
+         border: 1px solid #dedede;
+         margin-right: 8px;
+		 padding-left: 0px !important;
+		 border-top-left-radius: 4px;
+	     border-top-right-radius: 4px;
+	 .item-inner{
+	  border-bottom: 0px solid white !important;
+	 }
+	 .content-images{
+	 display: block !important;
+	 text-align: left;
+	 }
+	 .item-inner{ 
+	 padding-right: 0px !important;
+	 }
+  }
+  .img-loaded{
+      height: 229px !important;
+	  min-height: 180px !important;
+	  max-height: 250px !important;
+      white-space: nowrap;
+      width: 100% !important;
+	  min-width: auto !important;
+	  border-top-left-radius: 4px !important;
+	  border-top-right-radius: 4px !important;
+	  border-bottom-left-radius: 0px !important;
+	  border-bottom-right-radius: 0px !important;
+	  overflow: hidden !important;
+	 img{
+	  vertical-align: middle;
+    display: inline;
+    max-width: 100%;
+    height: auto !important;
+	width: 100% !important;
+	 }
+  }
+  ion-thumbnail{
+   margin-right: 0px !important;
+  }
+  .label-md{
+     margin-right: 0px !important;
+	 margin-top: 0px !important;
+  }
+}
+}
+.padding-events-text{
+   padding-left: 5px;
+   padding-top: 6px;
+}
+
+@media only screen and (min-width: 492px) and (max-width:667px) {
+page-events{
+ .event-modify{
+   .img-loaded{
+       height: 180px !important;
+	   overflow: hidden !important;
+	   img{
+	      min-height: 180px !important;
+		  min-width: 144px !important;
+	   }
+}
+}
+}
+}
+@media only screen and (min-width: 320px) and (max-width:491px) {
+page-events{
+ .event-modify{
+   .img-loaded{
+       height: 148px !important;
+	   min-height: 148px !important;
+	   img{
+	      min-height: 148px !important;
+		  min-width: 144px !important;
+	   }
+}
+}
+}
+}
+page-events{
+[padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
+  padding-top: 10px !important;
+}
+}
+@media only screen and (min-width: 800px) and (max-width:1112px) {
+page-events{
+ .event-modify{
+   .img-loaded{
+       height: 350px !important;
+	   min-height: 350px !important;
+	   img{
+	      min-height: 350px !important;
+		  min-width: 144px !important;
+	   }
+}
+}
+}
+}
+
+
+  

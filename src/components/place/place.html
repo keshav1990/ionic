@@ -1,0 +1,62 @@
+<ion-list  *ngIf="type=='normal' || type=='recent'" class="animated no-mg fadeIn">
+  
+    
+ 
+  
+  <ion-item class="content-images" (click)="showPlaceDetail()"> 
+  <div  *ngIf="checkPlaceNew()" translate></div> 
+ <ion-thumbnail item-start>
+  <ion-img src="{{config.url+p.places_image}}" > </ion-img>
+ </ion-thumbnail>
+ <h3>{{p.places_name}} </h3>
+ <p>{{p.categories_name}} </p>
+ <p> Closed 10:00 - 18:00 </p>
+  <p> 350 5th Ave, NY 10118,EE UU </p>
+   </ion-item> 
+    
+     <ion-row class="card-attr">
+      <ion-col col-8>
+        
+      </ion-col>
+      <ion-col text-center col-4>
+       
+      </ion-col>
+    </ion-row>  
+  
+
+  
+ 
+  <ion-buttons *ngIf="type=='normal'">
+  
+  </ion-buttons>
+
+  <ion-buttons class="bar-buttons-remove"  *ngIf="type=='recent'">
+    <button ion-button block color="danger" (click)="removeRecent()">{{'REMOVE'|translate}}</button>
+  </ion-buttons>
+
+  
+</ion-list>
+
+
+
+<ion-item *ngIf="type=='list'" class="animated fadeIn">
+  
+ 
+  <ion-thumbnail item-start>
+    <div class="list-tag-new" *ngIf="checkPlaceNew()" translate></div>
+    <ion-img   src="{{config.url+p.places_image}}" (click)="showPlaceDetail()"></ion-img>
+  </ion-thumbnail>
+  <h2><div class="line-clamp">{{p.places_name}}</div></h2>
+ 
+   <ion-row align-items-center>
+    <ion-col col-10>
+        
+        
+    </ion-col>
+    <ion-col col-2 >
+        
+    </ion-col>
+  </ion-row> 
+
+  
+</ion-item>

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="float-left">Places</ion-title>
+   <ion-buttons end>
+      <button class="srch" ion-button icon-only (click)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+   <button class="srch" ion-button icon-only (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+      <!-- <ion-icon name="settings" class="float-right"></ion-icon> -->
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar  class="toolbar-secondary icons-layout top-icons">
+    <ion-slides slidesPerView="auto" dir="{{shared.dir}}">
+      <ion-slide [class.selected]="selectedTab==''" *ngIf="shared.categories!=null" (click)="changeTab('')"> <ion-icon ios="ios-home" md="md-home"></ion-icon> All</ion-slide>
+
+      <ion-slide [class.selected]="selectedTab==c.id" *ngFor="let c of shared.categories" (click)="changeTab(c)"> 
+   <img src="{{config.url+c.icon}}" width="40" height="40"/>
+   
+        {{c.name}}
+      </ion-slide>
+    </ion-slides>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="page-places thumb-img" >
+ <ion-grid *ngIf="placeView=='grid'">
+  <ion-list>
+   <ion-item  *ngFor="let p of places"> 
+    <place [data]="p" [type]="'normal'"></place>
+    <ion-col *ngIf="places.length==0" col-12 class="animated fadeIn">
+     <h6 text-center>{{'No Places Found!'|translate}}</h6>
+    </ion-col>
+   </ion-item> 
+  </ion-list>
+ </ion-grid>
+   
+ <ion-list class="list-view" *ngIf="placeView=='list'">
+  <span *ngFor="let p of places">
+    <place [data]="p" [type]="'list'"></place>
+  </span>
+ </ion-list>
+   
+ <ion-infinite-scroll #infinite (ionInfinite)="getPlaces($event)">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>   
+  
+ 
+
+ </ion-content>
+  <ion-footer *ngIf="config.footerShowHide=='1'">
+  <footer></footer>
+</ion-footer>

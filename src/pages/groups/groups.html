@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Groups
+    </ion-title>
+ <ion-buttons end>
+      <button class="srch" ion-button icon-only (click)="openSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+   <button class="srch" ion-button icon-only (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+      <!-- <ion-icon name="settings" class="float-right"></ion-icon> -->
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list class="groups-custom">
+   
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Party in New York</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Nature in New York</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options> 
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Latin people en NY</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Wall Street Guide Tour</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Happenings in NY</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+      <ion-item class="header-bold">
+        <ion-avatar item-start>
+          <img src="assets/imgs/people.jpg">
+        </ion-avatar>
+        <h2>Dana</h2>
+        <a href="#">Open Group</a>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary"icon-start >
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+
+</ion-content>
+<ion-footer *ngIf="config.footerShowHide=='1'">
+  <footer></footer>
+</ion-footer>

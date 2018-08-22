@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{'Event Details'| translate }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ <ion-content padding>
+   <ion-list >
+    <ion-item class="h2-esb object-img-fit">
+  <div class="event-new" *ngIf="checkEventNew()">{{'New'|translate}}</div>
+ <h2>{{event.events_name}} </h2>
+ <p> {{event.categories_name}} </p>
+ <p> Likes&nbsp;({{event.events_liked}}) </p>
+      <ion-slides pager class="slider-width">
+
+  <ion-slide *ngIf="event!=null">
+      <img  src="{{config.url+event.events_image}}">
+    </ion-slide>
+    <ion-slide *ngFor="let b of event.images">
+      <img   src="{{config.url+b.image}}">
+    </ion-slide>
+
+</ion-slides>
+
+
+
+  
+  
+  <ion-row class="md-no-box">
+    <ion-col col-6><button ion-button clear item-start>    <ion-icon ios="ios-heart" md="md-heart"></ion-icon> Favourite</button></ion-col>
+  <ion-col col-6><button ion-button clear item-end name="share" (click)="share()">   <ion-icon name="ios-share-outline"></ion-icon> Share</button></ion-col>
+  </ion-row>
+
+    
+ 
+ 
+ 
+<ion-item class="event-detail-content no-space" *ngIf="event.events_description!=null && event.events_description!=''">
+<h2> {{'Event Description'|translate}} </h2>
+<div class="event-describtion" [innerHTML]="event.events_description"></div>
+</ion-item>
+
+  
+<ion-item-group class="list-color detail">
+    <ion-item *ngIf="event.streetaddress"> <ion-icon ios="ios-navigate" md="md-navigate"></ion-icon> {{ event.streetaddress }}</ion-item>
+    <ion-item *ngIf="event.booking_start_time">    <ion-icon ios="ios-time" md="md-time"></ion-icon> Booking Open Closes at {{ event.booking_start_time }} to {{ event.booking_close_time }}</ion-item>
+    <ion-item *ngIf="event.whole_name">   <ion-icon ios="ios-home" md="md-home"></ion-icon> {{event.whole_name }} </ion-item>
+    <ion-item *ngIf="event.event_start_date_time">   <ion-icon ios="ios-time" md="md-time"></ion-icon> Event Start Time {{ event.event_start_date_time }} </ion-item>
+    <ion-item *ngIf="event.contact_person">   <ion-icon ios="ios-person" md="md-person"></ion-icon> {{ event.contact_person }} </ion-item>
+    <ion-item *ngIf="event.phonenumber">   <ion-icon ios="ios-call" md="md-call"></ion-icon> {{ event.phonenumber }} </ion-item>
+    <ion-item *ngIf="event.websiteurl"> <ion-icon ios="ios-mail" md="md-mail"></ion-icon> {{ event.websiteurl }} </ion-item>
+  </ion-item-group>
+
+
+
+<ion-item class="no-space">
+<h2> Reviews </h2>
+</ion-item>
+<ion-slides pager class="slider-reviews">
+
+  <ion-slide>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+  <ion-slide>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+  <ion-slide>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
+  </ion-slide>
+
+</ion-slides>
+
+<ion-card class="ion-content-bold"> 
+
+
+  <ion-card-content>
+   Write a Review
+  </ion-card-content>
+
+</ion-card>
+
+
+
+</ion-item>
+    </ion-list>
+ </ion-content>
+ <ion-footer *ngIf="config.footerShowHide=='1'">
+  <footer></footer>
+</ion-footer>
